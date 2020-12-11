@@ -1,0 +1,2 @@
+insert into grade ( grade_grade,"grade_instPercentage","grade_extPercentage") values ('Primero',0.85,0.15);
+insert into grade ( grade_grade,"grade_instPercentage","grade_extPercentage") values ('Segundo',0.85,0.15);

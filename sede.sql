@@ -1,0 +1,1 @@
+insert into sede(sede_name,sede_logo,sede_code,sede_address) values ('Margarita Duran','dir/sede.png','corregir','Direccion');
