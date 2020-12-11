@@ -145,7 +145,7 @@ ALTER SEQUENCE public.module_module_id_seq OWNED BY public.module.module_id;
 
 CREATE TABLE public.permission (
     permission_id integer NOT NULL,
-    role_name character varying(20) NOT NULL
+    permission_name character varying(50) NOT NULL
 );
 
 
@@ -275,7 +275,7 @@ ALTER SEQUENCE public.qualification_qualification_id_seq OWNED BY public.qualifi
 CREATE TABLE public.role (
     role_id integer NOT NULL,
     role_name character varying(20) NOT NULL,
-    role_type character varying(8) NOT NULL
+    role_type character varying(20) NOT NULL
 );
 
 
@@ -411,7 +411,7 @@ CREATE TABLE public.student (
     "student_finalAverage" numeric(4,2),
     "student_institutionalAverage" numeric(4,2),
     student_code character varying(15) NOT NULL,
-    "student_firstTiem" boolean DEFAULT true NOT NULL,
+    "student_firstTime" boolean DEFAULT true NOT NULL,
     person_id bigint,
     modality_id integer,
     section_id integer,
@@ -532,7 +532,7 @@ ALTER SEQUENCE public.subject_to_student_subject_student_id_seq OWNED BY public.
 
 CREATE TABLE public."user" (
     user_id integer NOT NULL,
-    user_password character varying(30) NOT NULL,
+    user_password character varying(200) NOT NULL,
     person_id bigint,
     role_id integer,
     subject_id integer
