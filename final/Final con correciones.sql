@@ -1,15 +1,17 @@
+insert into sede(sede_name,sede_logo,sede_code,sede_address) values ('Margarita Duran','dir/sede.png','E0108','Calle daniel hernandez y 4ta av. Sur sta. Tecla, SANTA TECLA, LA LIBERTAD.');
 
-insert into sede(sede_name,sede_logo,sede_code,sede_address) values ('Margarita Duran','dir/sede.png','corregir','Direccion');
-
-insert into grade ( grade_grade,"grade_instPercentage","grade_extPercentage") values ('Primero Bachillerato',0.85,0.15);
+insert into grade ( grade_grade,"grade_instPercentage","grade_extPercentage") values ('Primero Bachillerato',0.9,0.1);
 insert into grade ( grade_grade,"grade_instPercentage","grade_extPercentage") values ('Segundo Bachillerato',0.85,0.15);
+
 insert into modality (modality_type) values ('Semipresencial');
 insert into modality (modality_type) values ('Presencial');
 insert into modality (modality_type) values ('En línea');
+
 insert into section ( section_name) values ('A');
 insert into section ( section_name) values ('B');
 insert into section ( section_name) values ('C');
 insert into section ( section_name) values ('D');
+
 insert into subject(subject_name,grade_id) values 
 ('Lenguaje',1),
 ('Matematica',1),
@@ -21,7 +23,9 @@ insert into subject(subject_name,grade_id) values
 ('Ciencias',2),
 ('Ingles',2),
 ('Sociales',2);
+
 insert into module (module_number) values (1),(2),(3),(4),(5);
+
 insert into person (person_username, "person_firstName", "person_lastName", "person_phoneNumber", person_email, "person_altPhoneNumber", sede_id, person_status) values ('AQTEIRNA', 'IRENE SUSANA', 'AQUINO ESCALANTE', null, null, null, 1, true);
 insert into person (person_username, "person_firstName", "person_lastName", "person_phoneNumber", person_email, "person_altPhoneNumber", sede_id, person_status) values ('BADADEER', 'DENIS ALEXANDER', 'BARTON PINEDA', null, null, null, 1, true);
 insert into person (person_username, "person_firstName", "person_lastName", "person_phoneNumber", person_email, "person_altPhoneNumber", sede_id, person_status) values ('BEELKASA', 'KAREN JULISSA', 'BELTRÁN JOVEL', null, null, null, 1, true);
@@ -140,6 +144,7 @@ insert into person (person_username, "person_firstName", "person_lastName", "per
 insert into person (person_username, "person_firstName", "person_lastName", "person_phoneNumber", person_email, "person_altPhoneNumber", sede_id, person_status) values ('DÍEZJOON', 'JONATHAN EDENILSON', 'DÍAZ MARTÍNEZ', null, null, null, 1, true);
 insert into person (person_username, "person_firstName", "person_lastName", "person_phoneNumber", person_email, "person_altPhoneNumber", sede_id, person_status) values ('OROSJOTO', 'JOSÉ ERNESTO', 'ORTIZ VILLALOBOS', null, null, null, 1, true);
 insert into person (person_username, "person_firstName", "person_lastName", "person_phoneNumber", person_email, "person_altPhoneNumber", sede_id, person_status) values ('RAEZJULA', 'JUDITH GABRIELA', 'RAMÍREZ VÁSQUEZ', null, null, null, 1, true);
+
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (3, 1, 1, 1, 2020, 'Link', false, null, null, true, 5067025);
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (3, 1, 2, 1, 2020, 'Link', false, null, null, true, 10421349);
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (3, 1, 3, 1, 2020, 'Link', false, null, null, true, 5827118);
@@ -258,6 +263,7 @@ insert into student (section_id, modality_id, person_id, grade_id, student_year,
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (4, 1, 116, 2, 2020, 'Link', false, null, null, true, 4302175);
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (4, 1, 117, 2, 2020, 'Link', false, null, null, true, 791720);
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (4, 1, 118, 2, 2020, 'Link', false, null, null, true, 740202);
+
 insert into subject_to_student (student_id, "subject_id ", student_code) values (1, 1, '5067025');
 insert into subject_to_student (student_id, "subject_id ", student_code) values (1, 2, '5067025');
 insert into subject_to_student (student_id, "subject_id ", student_code) values (1, 3, '5067025');
@@ -848,6 +854,7 @@ insert into subject_to_student (student_id, "subject_id ", student_code) values 
 insert into subject_to_student (student_id, "subject_id ", student_code) values (118, 3, '740202');
 insert into subject_to_student (student_id, "subject_id ", student_code) values (118, 4, '740202');
 insert into subject_to_student (student_id, "subject_id ", student_code) values (118, 5, '740202');
+
 insert into qualification (qualification_note, qualification_approved, "qualification_recoverLink", "qualification_recoverEnabled", "qualification_extTest", "qualification_updatedBy", updated_at, created_at, subject_student_id, module_id) values (8.2, 'true', 'LinkRecuperacion', 'false', false, 'Mario C', '2020/08/16', '2019/12/01', 1, 1);
 insert into qualification (qualification_note, qualification_approved, "qualification_recoverLink", "qualification_recoverEnabled", "qualification_extTest", "qualification_updatedBy", updated_at, created_at, subject_student_id, module_id) values (8.2, 'true', 'LinkRecuperacion', 'false', false, 'Mario C', '2020/05/05', '2020/06/26', 1, 2);
 insert into qualification (qualification_note, qualification_approved, "qualification_recoverLink", "qualification_recoverEnabled", "qualification_extTest", "qualification_updatedBy", updated_at, created_at, subject_student_id, module_id) values (8.2, 'true', 'LinkRecuperacion', 'false', false, 'Mario C', '2020/10/06', '2020/10/18', 1, 3);
@@ -3231,6 +3238,7 @@ insert into person (person_username, "person_firstName", "person_lastName", "per
 insert into person (person_username, "person_firstName", "person_lastName", "person_phoneNumber", person_email, "person_altPhoneNumber", sede_id, person_status) values ('CaezMaus', 'Manuel de Jesus', 'Castro Meléndez', null, null, null, 1, true);
 insert into person (person_username, "person_firstName", "person_lastName", "person_phoneNumber", person_email, "person_altPhoneNumber", sede_id, person_status) values ('RaesDain', 'David Efrain', 'Rauda Morales', null, null, null, 1, true);
 insert into person (person_username, "person_firstName", "person_lastName", "person_phoneNumber", person_email, "person_altPhoneNumber", sede_id, person_status) values ('RonaDaio', 'Daniel Antonio', 'Romero Mena', null, null, null, 1, true);
+
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (3, 1, 119, 1, 2020, 'Link', false, null, null, true, 2095776);
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (3, 1, 120, 1, 2020, 'Link', false, null, null, true, 744219);
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (3, 1, 121, 1, 2020, 'Link', false, null, null, true, 2407773);
@@ -3253,6 +3261,7 @@ insert into student (section_id, modality_id, person_id, grade_id, student_year,
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (4, 1, 138, 2, 2020, 'Link', false, null, null, true, '792024');
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (4, 1, 139, 2, 2020, 'Link', false, null, null, true, 'revisar21');
 insert into student (section_id, modality_id, person_id, grade_id, student_year, student_report, student_approved, "student_finalAverage", "student_institutionalAverage", "student_firstTime", student_code) values (4, 1, 140, 2, 2020, 'Link', false, null, null, true, '1351732');
+
 insert into subject_to_student (student_id, "subject_id ", student_code) values (119, 1, '2095776');
 insert into subject_to_student (student_id, "subject_id ", student_code) values (119, 2, '2095776');
 insert into subject_to_student (student_id, "subject_id ", student_code) values (119, 3, '2095776');
@@ -3363,6 +3372,7 @@ insert into subject_to_student (student_id, "subject_id ", student_code) values 
 insert into subject_to_student (student_id, "subject_id ", student_code) values (140, 3, '1351732');
 insert into subject_to_student (student_id, "subject_id ", student_code) values (140, 4, '1351732');
 insert into subject_to_student (student_id, "subject_id ", student_code) values (140, 5, '1351732');
+
 insert into qualification (qualification_note, qualification_approved, "qualification_recoverLink", "qualification_recoverEnabled", "qualification_extTest", "qualification_updatedBy", updated_at, created_at, subject_student_id, module_id) values (0, 'false', 'LinkRecuperacion', 'true', false, 'Mario C', '2019/12/20', '2020/09/14', 591, 1);
 insert into qualification (qualification_note, qualification_approved, "qualification_recoverLink", "qualification_recoverEnabled", "qualification_extTest", "qualification_updatedBy", updated_at, created_at, subject_student_id, module_id) values (0, 'false', 'LinkRecuperacion', 'true', false, 'Mario C', '2020/05/21', '2019/12/15', 591, 2);
 insert into qualification (qualification_note, qualification_approved, "qualification_recoverLink", "qualification_recoverEnabled", "qualification_extTest", "qualification_updatedBy", updated_at, created_at, subject_student_id, module_id) values (0, 'false', 'LinkRecuperacion', 'true', false, 'Mario C', '2020/05/31', '2020/01/05', 591, 3);
