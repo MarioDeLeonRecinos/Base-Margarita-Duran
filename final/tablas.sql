@@ -5,7 +5,7 @@
 -- Dumped from database version 12.4
 -- Dumped by pg_dump version 12.4
 
--- Started on 2020-12-10 18:44:27
+-- Started on 2020-12-13 00:25:55
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,7 +23,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 202 (class 1259 OID 44462)
+-- TOC entry 221 (class 1259 OID 45167)
 -- Name: grade; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -38,7 +38,7 @@ CREATE TABLE public.grade (
 ALTER TABLE public.grade OWNER TO postgres;
 
 --
--- TOC entry 203 (class 1259 OID 44465)
+-- TOC entry 220 (class 1259 OID 45165)
 -- Name: grade_grade_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -55,7 +55,7 @@ ALTER TABLE public.grade_grade_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2965 (class 0 OID 0)
--- Dependencies: 203
+-- Dependencies: 220
 -- Name: grade_grade_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -63,7 +63,7 @@ ALTER SEQUENCE public.grade_grade_id_seq OWNED BY public.grade.grade_id;
 
 
 --
--- TOC entry 204 (class 1259 OID 44467)
+-- TOC entry 223 (class 1259 OID 45175)
 -- Name: modality; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -76,7 +76,7 @@ CREATE TABLE public.modality (
 ALTER TABLE public.modality OWNER TO postgres;
 
 --
--- TOC entry 205 (class 1259 OID 44470)
+-- TOC entry 222 (class 1259 OID 45173)
 -- Name: modality_modality_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -93,7 +93,7 @@ ALTER TABLE public.modality_modality_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2966 (class 0 OID 0)
--- Dependencies: 205
+-- Dependencies: 222
 -- Name: modality_modality_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -101,7 +101,7 @@ ALTER SEQUENCE public.modality_modality_id_seq OWNED BY public.modality.modality
 
 
 --
--- TOC entry 206 (class 1259 OID 44472)
+-- TOC entry 203 (class 1259 OID 45082)
 -- Name: module; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -114,7 +114,7 @@ CREATE TABLE public.module (
 ALTER TABLE public.module OWNER TO postgres;
 
 --
--- TOC entry 207 (class 1259 OID 44475)
+-- TOC entry 202 (class 1259 OID 45080)
 -- Name: module_module_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -131,7 +131,7 @@ ALTER TABLE public.module_module_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2967 (class 0 OID 0)
--- Dependencies: 207
+-- Dependencies: 202
 -- Name: module_module_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -139,7 +139,7 @@ ALTER SEQUENCE public.module_module_id_seq OWNED BY public.module.module_id;
 
 
 --
--- TOC entry 208 (class 1259 OID 44477)
+-- TOC entry 209 (class 1259 OID 45111)
 -- Name: permission; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -152,7 +152,7 @@ CREATE TABLE public.permission (
 ALTER TABLE public.permission OWNER TO postgres;
 
 --
--- TOC entry 209 (class 1259 OID 44480)
+-- TOC entry 208 (class 1259 OID 45109)
 -- Name: permission_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -169,7 +169,7 @@ ALTER TABLE public.permission_permission_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2968 (class 0 OID 0)
--- Dependencies: 209
+-- Dependencies: 208
 -- Name: permission_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -177,7 +177,7 @@ ALTER SEQUENCE public.permission_permission_id_seq OWNED BY public.permission.pe
 
 
 --
--- TOC entry 210 (class 1259 OID 44482)
+-- TOC entry 215 (class 1259 OID 45138)
 -- Name: person; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -197,7 +197,7 @@ CREATE TABLE public.person (
 ALTER TABLE public.person OWNER TO postgres;
 
 --
--- TOC entry 211 (class 1259 OID 44486)
+-- TOC entry 214 (class 1259 OID 45136)
 -- Name: person_person_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -213,7 +213,7 @@ ALTER TABLE public.person_person_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2969 (class 0 OID 0)
--- Dependencies: 211
+-- Dependencies: 214
 -- Name: person_person_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -221,7 +221,7 @@ ALTER SEQUENCE public.person_person_id_seq OWNED BY public.person.person_id;
 
 
 --
--- TOC entry 212 (class 1259 OID 44488)
+-- TOC entry 205 (class 1259 OID 45090)
 -- Name: qualification; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -235,15 +235,15 @@ CREATE TABLE public.qualification (
     "qualification_updatedBy" text NOT NULL,
     updated_at timestamp without time zone DEFAULT now() NOT NULL,
     created_at timestamp without time zone DEFAULT now() NOT NULL,
-    module_id smallint,
-    subject_student_id integer
+    subject_student_id integer,
+    module_id smallint
 );
 
 
 ALTER TABLE public.qualification OWNER TO postgres;
 
 --
--- TOC entry 213 (class 1259 OID 44496)
+-- TOC entry 204 (class 1259 OID 45088)
 -- Name: qualification_qualification_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -260,7 +260,7 @@ ALTER TABLE public.qualification_qualification_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2970 (class 0 OID 0)
--- Dependencies: 213
+-- Dependencies: 204
 -- Name: qualification_qualification_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -268,7 +268,7 @@ ALTER SEQUENCE public.qualification_qualification_id_seq OWNED BY public.qualifi
 
 
 --
--- TOC entry 214 (class 1259 OID 44498)
+-- TOC entry 211 (class 1259 OID 45119)
 -- Name: role; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -282,7 +282,7 @@ CREATE TABLE public.role (
 ALTER TABLE public.role OWNER TO postgres;
 
 --
--- TOC entry 215 (class 1259 OID 44501)
+-- TOC entry 228 (class 1259 OID 45203)
 -- Name: role_permissions_permission; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -295,7 +295,7 @@ CREATE TABLE public.role_permissions_permission (
 ALTER TABLE public.role_permissions_permission OWNER TO postgres;
 
 --
--- TOC entry 216 (class 1259 OID 44504)
+-- TOC entry 210 (class 1259 OID 45117)
 -- Name: role_role_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -312,7 +312,7 @@ ALTER TABLE public.role_role_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2971 (class 0 OID 0)
--- Dependencies: 216
+-- Dependencies: 210
 -- Name: role_role_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -320,7 +320,7 @@ ALTER SEQUENCE public.role_role_id_seq OWNED BY public.role.role_id;
 
 
 --
--- TOC entry 217 (class 1259 OID 44506)
+-- TOC entry 225 (class 1259 OID 45183)
 -- Name: section; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -333,7 +333,7 @@ CREATE TABLE public.section (
 ALTER TABLE public.section OWNER TO postgres;
 
 --
--- TOC entry 218 (class 1259 OID 44509)
+-- TOC entry 224 (class 1259 OID 45181)
 -- Name: section_section_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -350,7 +350,7 @@ ALTER TABLE public.section_section_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2972 (class 0 OID 0)
--- Dependencies: 218
+-- Dependencies: 224
 -- Name: section_section_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -358,7 +358,7 @@ ALTER SEQUENCE public.section_section_id_seq OWNED BY public.section.section_id;
 
 
 --
--- TOC entry 219 (class 1259 OID 44511)
+-- TOC entry 213 (class 1259 OID 45127)
 -- Name: sede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -374,7 +374,7 @@ CREATE TABLE public.sede (
 ALTER TABLE public.sede OWNER TO postgres;
 
 --
--- TOC entry 220 (class 1259 OID 44517)
+-- TOC entry 212 (class 1259 OID 45125)
 -- Name: sede_sede_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -391,7 +391,7 @@ ALTER TABLE public.sede_sede_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2973 (class 0 OID 0)
--- Dependencies: 220
+-- Dependencies: 212
 -- Name: sede_sede_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -399,7 +399,7 @@ ALTER SEQUENCE public.sede_sede_id_seq OWNED BY public.sede.sede_id;
 
 
 --
--- TOC entry 221 (class 1259 OID 44519)
+-- TOC entry 227 (class 1259 OID 45191)
 -- Name: student; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -422,7 +422,7 @@ CREATE TABLE public.student (
 ALTER TABLE public.student OWNER TO postgres;
 
 --
--- TOC entry 222 (class 1259 OID 44526)
+-- TOC entry 226 (class 1259 OID 45189)
 -- Name: student_student_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -439,7 +439,7 @@ ALTER TABLE public.student_student_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2974 (class 0 OID 0)
--- Dependencies: 222
+-- Dependencies: 226
 -- Name: student_student_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -447,7 +447,7 @@ ALTER SEQUENCE public.student_student_id_seq OWNED BY public.student.student_id;
 
 
 --
--- TOC entry 223 (class 1259 OID 44528)
+-- TOC entry 219 (class 1259 OID 45159)
 -- Name: subject; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -461,7 +461,7 @@ CREATE TABLE public.subject (
 ALTER TABLE public.subject OWNER TO postgres;
 
 --
--- TOC entry 224 (class 1259 OID 44531)
+-- TOC entry 218 (class 1259 OID 45157)
 -- Name: subject_subject_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -478,7 +478,7 @@ ALTER TABLE public.subject_subject_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2975 (class 0 OID 0)
--- Dependencies: 224
+-- Dependencies: 218
 -- Name: subject_subject_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -486,7 +486,7 @@ ALTER SEQUENCE public.subject_subject_id_seq OWNED BY public.subject.subject_id;
 
 
 --
--- TOC entry 225 (class 1259 OID 44533)
+-- TOC entry 207 (class 1259 OID 45103)
 -- Name: subject_to_student; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -501,7 +501,7 @@ CREATE TABLE public.subject_to_student (
 ALTER TABLE public.subject_to_student OWNER TO postgres;
 
 --
--- TOC entry 226 (class 1259 OID 44536)
+-- TOC entry 206 (class 1259 OID 45101)
 -- Name: subject_to_student_subject_student_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -518,7 +518,7 @@ ALTER TABLE public.subject_to_student_subject_student_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2976 (class 0 OID 0)
--- Dependencies: 226
+-- Dependencies: 206
 -- Name: subject_to_student_subject_student_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -526,7 +526,7 @@ ALTER SEQUENCE public.subject_to_student_subject_student_id_seq OWNED BY public.
 
 
 --
--- TOC entry 227 (class 1259 OID 44538)
+-- TOC entry 217 (class 1259 OID 45149)
 -- Name: user; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -542,7 +542,7 @@ CREATE TABLE public."user" (
 ALTER TABLE public."user" OWNER TO postgres;
 
 --
--- TOC entry 228 (class 1259 OID 44541)
+-- TOC entry 216 (class 1259 OID 45147)
 -- Name: user_user_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -559,7 +559,7 @@ ALTER TABLE public.user_user_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2977 (class 0 OID 0)
--- Dependencies: 228
+-- Dependencies: 216
 -- Name: user_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -567,7 +567,7 @@ ALTER SEQUENCE public.user_user_id_seq OWNED BY public."user".user_id;
 
 
 --
--- TOC entry 2766 (class 2604 OID 44543)
+-- TOC entry 2778 (class 2604 OID 45170)
 -- Name: grade grade_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -575,7 +575,7 @@ ALTER TABLE ONLY public.grade ALTER COLUMN grade_id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 2767 (class 2604 OID 44544)
+-- TOC entry 2779 (class 2604 OID 45178)
 -- Name: modality modality_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -583,7 +583,7 @@ ALTER TABLE ONLY public.modality ALTER COLUMN modality_id SET DEFAULT nextval('p
 
 
 --
--- TOC entry 2768 (class 2604 OID 44545)
+-- TOC entry 2766 (class 2604 OID 45085)
 -- Name: module module_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -591,7 +591,7 @@ ALTER TABLE ONLY public.module ALTER COLUMN module_id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2769 (class 2604 OID 44546)
+-- TOC entry 2771 (class 2604 OID 45114)
 -- Name: permission permission_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -599,7 +599,7 @@ ALTER TABLE ONLY public.permission ALTER COLUMN permission_id SET DEFAULT nextva
 
 
 --
--- TOC entry 2771 (class 2604 OID 44547)
+-- TOC entry 2774 (class 2604 OID 45141)
 -- Name: person person_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -607,7 +607,7 @@ ALTER TABLE ONLY public.person ALTER COLUMN person_id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2774 (class 2604 OID 44548)
+-- TOC entry 2767 (class 2604 OID 45093)
 -- Name: qualification qualification_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -615,7 +615,7 @@ ALTER TABLE ONLY public.qualification ALTER COLUMN qualification_id SET DEFAULT 
 
 
 --
--- TOC entry 2775 (class 2604 OID 44549)
+-- TOC entry 2772 (class 2604 OID 45122)
 -- Name: role role_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -623,7 +623,7 @@ ALTER TABLE ONLY public.role ALTER COLUMN role_id SET DEFAULT nextval('public.ro
 
 
 --
--- TOC entry 2776 (class 2604 OID 44550)
+-- TOC entry 2780 (class 2604 OID 45186)
 -- Name: section section_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -631,7 +631,7 @@ ALTER TABLE ONLY public.section ALTER COLUMN section_id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 2777 (class 2604 OID 44551)
+-- TOC entry 2773 (class 2604 OID 45130)
 -- Name: sede sede_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -639,7 +639,7 @@ ALTER TABLE ONLY public.sede ALTER COLUMN sede_id SET DEFAULT nextval('public.se
 
 
 --
--- TOC entry 2779 (class 2604 OID 44552)
+-- TOC entry 2781 (class 2604 OID 45194)
 -- Name: student student_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -647,7 +647,7 @@ ALTER TABLE ONLY public.student ALTER COLUMN student_id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 2780 (class 2604 OID 44553)
+-- TOC entry 2777 (class 2604 OID 45162)
 -- Name: subject subject_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -655,7 +655,7 @@ ALTER TABLE ONLY public.subject ALTER COLUMN subject_id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 2781 (class 2604 OID 44554)
+-- TOC entry 2770 (class 2604 OID 45106)
 -- Name: subject_to_student subject_student_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -663,7 +663,7 @@ ALTER TABLE ONLY public.subject_to_student ALTER COLUMN subject_student_id SET D
 
 
 --
--- TOC entry 2782 (class 2604 OID 44555)
+-- TOC entry 2776 (class 2604 OID 45152)
 -- Name: user user_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -671,7 +671,7 @@ ALTER TABLE ONLY public."user" ALTER COLUMN user_id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 2796 (class 2606 OID 44557)
+-- TOC entry 2786 (class 2606 OID 45100)
 -- Name: qualification PK_1eb50cd787f180035ee73d703cf; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -680,7 +680,7 @@ ALTER TABLE ONLY public.qualification
 
 
 --
--- TOC entry 2814 (class 2606 OID 44559)
+-- TOC entry 2788 (class 2606 OID 45108)
 -- Name: subject_to_student PK_3f77e201570d449eb2d3f9d66cc; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -689,7 +689,7 @@ ALTER TABLE ONLY public.subject_to_student
 
 
 --
--- TOC entry 2792 (class 2606 OID 44561)
+-- TOC entry 2796 (class 2606 OID 45144)
 -- Name: person PK_403c951c5e9b776c16385a8940f; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -698,7 +698,7 @@ ALTER TABLE ONLY public.person
 
 
 --
--- TOC entry 2784 (class 2606 OID 44563)
+-- TOC entry 2806 (class 2606 OID 45172)
 -- Name: grade PK_4281d128f5f3f36539b83eb164a; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -707,7 +707,7 @@ ALTER TABLE ONLY public.grade
 
 
 --
--- TOC entry 2804 (class 2606 OID 44565)
+-- TOC entry 2810 (class 2606 OID 45188)
 -- Name: section PK_64bb5bb8f6931759fee65510d8e; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -716,7 +716,7 @@ ALTER TABLE ONLY public.section
 
 
 --
--- TOC entry 2812 (class 2606 OID 44567)
+-- TOC entry 2804 (class 2606 OID 45164)
 -- Name: subject PK_70fbdd4144f3fc91373a93fe04a; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -725,7 +725,7 @@ ALTER TABLE ONLY public.subject
 
 
 --
--- TOC entry 2816 (class 2606 OID 44569)
+-- TOC entry 2800 (class 2606 OID 45154)
 -- Name: user PK_758b8ce7c18b9d347461b30228d; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -734,7 +734,7 @@ ALTER TABLE ONLY public."user"
 
 
 --
--- TOC entry 2788 (class 2606 OID 44571)
+-- TOC entry 2784 (class 2606 OID 45087)
 -- Name: module PK_784b3d8dc3872808cbf8937b95a; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -743,7 +743,7 @@ ALTER TABLE ONLY public.module
 
 
 --
--- TOC entry 2790 (class 2606 OID 44573)
+-- TOC entry 2790 (class 2606 OID 45116)
 -- Name: permission PK_aaa6d61e22fb453965ae6157ce5; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -752,7 +752,7 @@ ALTER TABLE ONLY public.permission
 
 
 --
--- TOC entry 2808 (class 2606 OID 44575)
+-- TOC entry 2812 (class 2606 OID 45200)
 -- Name: student PK_be3689991c2cc4b6f4cf39087fa; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -761,7 +761,7 @@ ALTER TABLE ONLY public.student
 
 
 --
--- TOC entry 2786 (class 2606 OID 44577)
+-- TOC entry 2808 (class 2606 OID 45180)
 -- Name: modality PK_c6c2bb8aa23693605f3d531421b; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -770,7 +770,7 @@ ALTER TABLE ONLY public.modality
 
 
 --
--- TOC entry 2802 (class 2606 OID 44579)
+-- TOC entry 2818 (class 2606 OID 45207)
 -- Name: role_permissions_permission PK_dae0c8ab7202c311e458d6f6dfe; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -779,7 +779,7 @@ ALTER TABLE ONLY public.role_permissions_permission
 
 
 --
--- TOC entry 2798 (class 2606 OID 44581)
+-- TOC entry 2792 (class 2606 OID 45124)
 -- Name: role PK_df46160e6aa79943b83c81e496e; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -788,7 +788,7 @@ ALTER TABLE ONLY public.role
 
 
 --
--- TOC entry 2806 (class 2606 OID 44583)
+-- TOC entry 2794 (class 2606 OID 45135)
 -- Name: sede PK_f2440a3b691fb5600927eb9f4d5; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -797,7 +797,7 @@ ALTER TABLE ONLY public.sede
 
 
 --
--- TOC entry 2818 (class 2606 OID 44585)
+-- TOC entry 2802 (class 2606 OID 45156)
 -- Name: user REL_a4cee7e601d219733b064431fb; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -806,7 +806,7 @@ ALTER TABLE ONLY public."user"
 
 
 --
--- TOC entry 2810 (class 2606 OID 44587)
+-- TOC entry 2814 (class 2606 OID 45202)
 -- Name: student REL_f68e92722db1a5e99b341a8cf9; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -815,7 +815,7 @@ ALTER TABLE ONLY public.student
 
 
 --
--- TOC entry 2794 (class 2606 OID 44589)
+-- TOC entry 2798 (class 2606 OID 45146)
 -- Name: person UQ_95576b803e515b811c6dd9c9975; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -824,7 +824,7 @@ ALTER TABLE ONLY public.person
 
 
 --
--- TOC entry 2799 (class 1259 OID 44590)
+-- TOC entry 2815 (class 1259 OID 45209)
 -- Name: IDX_841e12f32191ecf470a7a48279; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -832,7 +832,7 @@ CREATE INDEX "IDX_841e12f32191ecf470a7a48279" ON public.role_permissions_permiss
 
 
 --
--- TOC entry 2800 (class 1259 OID 44591)
+-- TOC entry 2816 (class 1259 OID 45208)
 -- Name: IDX_dc0d62be37f85731141d855bfd; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -840,7 +840,7 @@ CREATE INDEX "IDX_dc0d62be37f85731141d855bfd" ON public.role_permissions_permiss
 
 
 --
--- TOC entry 2829 (class 2606 OID 44592)
+-- TOC entry 2821 (class 2606 OID 45220)
 -- Name: subject_to_student FK_084eedc7141796b4cdc75826aae; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -849,7 +849,7 @@ ALTER TABLE ONLY public.subject_to_student
 
 
 --
--- TOC entry 2824 (class 2606 OID 44597)
+-- TOC entry 2831 (class 2606 OID 45270)
 -- Name: student FK_241487af7c8a29186b0d46c1223; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -858,7 +858,7 @@ ALTER TABLE ONLY public.student
 
 
 --
--- TOC entry 2828 (class 2606 OID 44602)
+-- TOC entry 2827 (class 2606 OID 45250)
 -- Name: subject FK_28d930d238627fc4b8eee121e0e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -867,7 +867,7 @@ ALTER TABLE ONLY public.subject
 
 
 --
--- TOC entry 2825 (class 2606 OID 44607)
+-- TOC entry 2830 (class 2606 OID 45265)
 -- Name: student FK_6375de2166bcb0a39596bf261de; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -876,7 +876,7 @@ ALTER TABLE ONLY public.student
 
 
 --
--- TOC entry 2819 (class 2606 OID 44612)
+-- TOC entry 2823 (class 2606 OID 45230)
 -- Name: person FK_67d9de51508ed3b9912065582dc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -885,7 +885,7 @@ ALTER TABLE ONLY public.person
 
 
 --
--- TOC entry 2826 (class 2606 OID 44617)
+-- TOC entry 2829 (class 2606 OID 45260)
 -- Name: student FK_7777877d09dea2545e128ad3a8c; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -894,7 +894,7 @@ ALTER TABLE ONLY public.student
 
 
 --
--- TOC entry 2822 (class 2606 OID 44622)
+-- TOC entry 2833 (class 2606 OID 45280)
 -- Name: role_permissions_permission FK_841e12f32191ecf470a7a48279e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -903,7 +903,7 @@ ALTER TABLE ONLY public.role_permissions_permission
 
 
 --
--- TOC entry 2820 (class 2606 OID 44627)
+-- TOC entry 2820 (class 2606 OID 45215)
 -- Name: qualification FK_9a3aad84405e2455590b37e27c7; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -912,7 +912,7 @@ ALTER TABLE ONLY public.qualification
 
 
 --
--- TOC entry 2831 (class 2606 OID 44632)
+-- TOC entry 2826 (class 2606 OID 45245)
 -- Name: user FK_9ef8e60021322f169ebf038f202; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -921,7 +921,7 @@ ALTER TABLE ONLY public."user"
 
 
 --
--- TOC entry 2832 (class 2606 OID 44637)
+-- TOC entry 2824 (class 2606 OID 45235)
 -- Name: user FK_a4cee7e601d219733b064431fba; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -930,7 +930,7 @@ ALTER TABLE ONLY public."user"
 
 
 --
--- TOC entry 2830 (class 2606 OID 44642)
+-- TOC entry 2822 (class 2606 OID 45225)
 -- Name: subject_to_student FK_abe9f3ee18e03d8eaced412ff63; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -939,7 +939,7 @@ ALTER TABLE ONLY public.subject_to_student
 
 
 --
--- TOC entry 2823 (class 2606 OID 44647)
+-- TOC entry 2832 (class 2606 OID 45275)
 -- Name: role_permissions_permission FK_dc0d62be37f85731141d855bfd1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -948,7 +948,7 @@ ALTER TABLE ONLY public.role_permissions_permission
 
 
 --
--- TOC entry 2821 (class 2606 OID 44652)
+-- TOC entry 2819 (class 2606 OID 45210)
 -- Name: qualification FK_ed5ce455307dfc33f6a120237b3; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -957,7 +957,7 @@ ALTER TABLE ONLY public.qualification
 
 
 --
--- TOC entry 2827 (class 2606 OID 44657)
+-- TOC entry 2828 (class 2606 OID 45255)
 -- Name: student FK_f68e92722db1a5e99b341a8cf9b; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -966,7 +966,7 @@ ALTER TABLE ONLY public.student
 
 
 --
--- TOC entry 2833 (class 2606 OID 44662)
+-- TOC entry 2825 (class 2606 OID 45240)
 -- Name: user FK_fb2e442d14add3cefbdf33c4561; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -974,7 +974,7 @@ ALTER TABLE ONLY public."user"
     ADD CONSTRAINT "FK_fb2e442d14add3cefbdf33c4561" FOREIGN KEY (role_id) REFERENCES public.role(role_id);
 
 
--- Completed on 2020-12-10 18:44:27
+-- Completed on 2020-12-13 00:25:55
 
 --
 -- PostgreSQL database dump complete

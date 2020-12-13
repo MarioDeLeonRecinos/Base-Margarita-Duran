@@ -1,1 +1,1 @@
-insert into sede(sede_name,sede_logo,sede_code,sede_address) values ('Margarita Duran','dir/sede.png','corregir','Direccion');
+insert into sede(sede_name,sede_logo,sede_code,sede_address) values ('Margarita Duran','dir/sede.png','E0108','Calle daniel hernandez y 4ta av. Sur sta. Tecla, SANTA TECLA, LA LIBERTAD.');
